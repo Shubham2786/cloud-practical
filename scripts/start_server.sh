@@ -1,7 +1,11 @@
 #!/bin/bash
 
+echo "Installing Apache..."
+
+sudo yum update -y
+sudo yum install -y httpd
+
 echo "Starting Apache..."
 
-# Configure Apache
-systemctl restart httpd
-systemctl enable httpd
+sudo systemctl start httpd
+sudo systemctl enable httpd
